@@ -2,6 +2,7 @@ package com.vytrack.step_definitions;
 
 import com.vytrack.pages.CalendarPage;
 import com.vytrack.utils.BrowserUtils;
+import com.vytrack.utils.Driver;
 import com.vytrack.utils.VytrackUtils;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -63,5 +64,19 @@ public class Calendar {
         calendarPage.cancelButton.click();
         BrowserUtils.highlight(calendarPage.createEvent);
         calendarPage.createEvent.click();
+    }
+
+    @When("user write a {string} in the Description field")
+    public void user_write_a_in_the_description_field(String message) {
+        Driver.getDriver().switchTo().frame(calendarPage.iframe);
+        String text = message + Driver.getDriver();
+        BrowserUtils.highlight(calendarPage.textBody);
+        calendarPage.textBody.sendKeys(text);
+    }
+
+    @Then("user should see his {string} in the Description")
+    public void user_should_see_his_in_the_description(String message) {
+        BrowserUtils.highlight(calendarPage.message);
+        Assert.assertEquals(message+Driver.getDriver(), calendarPage.message.getText());
     }
 }
