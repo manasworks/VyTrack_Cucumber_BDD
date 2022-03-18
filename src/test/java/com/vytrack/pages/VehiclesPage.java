@@ -13,7 +13,7 @@ public class VehiclesPage {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
-    @FindBy (xpath = "//tr[1]//div[@class='more-bar-holder']/div") public WebElement dots;
+    @FindBy (xpath = "//tr[1]//a[@class='dropdown-toggle']") public WebElement dots;
     @FindBy (xpath = "//li[@class='launcher-item']/a") public List<WebElement> iconsList;
     @FindBy (xpath = "//tr[20]//td[20]") public WebElement lastCell;
 

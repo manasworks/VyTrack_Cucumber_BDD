@@ -17,6 +17,5 @@ Feature: CY19-68 / As a user, I want to view edit car info icons from the Vehicl
 
     Examples:
       | username        |
-      | user31          |
       | storemanager67  |
       | salesmanager125 |
