@@ -7,9 +7,9 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
 
-public class Campaigns {
+public class CampaignsPage {
 
-    public Campaigns(){
+    public CampaignsPage(){
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
