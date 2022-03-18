@@ -5,7 +5,7 @@ Feature: CY19-72 / As a user, I want to write the “Description” when I creat
 
   Accounts are: Drivers, Store Managers, Sales Managers
 
-  Scenario Outline: Users should see 1 by default
+  Scenario Outline: Users be able to write messages in the Description field
     Given user '<username>' login to the Dashboard
     When user on Dashboard page
     And user navigates to "Activities" module and clicks "Calendar Events"
