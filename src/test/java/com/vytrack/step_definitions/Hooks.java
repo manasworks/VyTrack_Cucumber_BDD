@@ -7,7 +7,6 @@ import io.cucumber.java.Scenario;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
-import java.util.concurrent.TimeUnit;
 
 public class Hooks {
 
@@ -27,7 +26,6 @@ public class Hooks {
             scenario.attach(screenshot, "image/png", scenario.getName());
         }
 
-        System.out.println("Scenarios  failed? "+scenario.isFailed() );
         Driver.closeDriver();
     }
 }
