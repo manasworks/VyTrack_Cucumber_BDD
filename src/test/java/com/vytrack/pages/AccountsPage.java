@@ -7,14 +7,15 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
 
-public class Accounts {
+public class AccountsPage {
 
-    public Accounts(){
+    public AccountsPage(){
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
     @FindBy (xpath = "//a[@title='Filters']") public WebElement filters;
-    @FindBy (xpath = "//div[@class='btn filter-criteria-selector oro-drop-opener oro-dropdown-toggle filter-default-value']")
+    @FindBy (xpath = "//a[.='Manage filters']") public WebElement manageFilters;
+    @FindBy (xpath = "//div[@class='filter-item oro-drop']")
     public List<WebElement> allFilters;
 
 }
