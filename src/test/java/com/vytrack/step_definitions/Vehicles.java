@@ -44,7 +44,6 @@ public class Vehicles {
 
     @Then("user click firs checkbox")
     public void user_click_firs_checkbox() {
-        BrowserUtils.highlight(vehiclesPage.firstCheckbox);
         vehiclesPage.firstCheckbox.click();
     }
 
