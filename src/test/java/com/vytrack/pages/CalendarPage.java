@@ -5,9 +5,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class Calendar {
+public class CalendarPage {
 
-    public Calendar(){
+    public CalendarPage(){
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
@@ -19,4 +19,5 @@ public class Calendar {
     @FindBy (xpath = "//iframe") public WebElement iframe;
     @FindBy (xpath = "//body") public WebElement textBody;
     @FindBy (xpath = "//p") public WebElement message;
+    @FindBy (xpath = "//h1[@class='oro-subtitle']") public WebElement pageLabel;
 }
