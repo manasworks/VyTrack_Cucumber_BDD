@@ -8,7 +8,7 @@ Feature: CY19-70 / As a user, I want to create a recurring / repetitive calendar
 
   Accounts are: Drivers, Store Managers, Sales Managers
 
-  Scenario Outline: Users should see “view, edit, delete” when they hover over "..."
+  Scenario Outline: Users should see 1 by default
     Given user '<username>' login to the Dashboard
     When user on Dashboard page
     And user navigates to "Activities" module and clicks "Calendar Events"

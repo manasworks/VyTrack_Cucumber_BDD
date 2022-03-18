@@ -40,6 +40,7 @@ public class Calendar {
 
     @When("user delete the number {string}")
     public void user_delete_the_number(String days) {
+        BrowserUtils.highlight(calendarPage.daysInput);
         calendarPage.daysInput.sendKeys(Keys.BACK_SPACE);
         calendarPage.inputTitle.click();
     }
@@ -49,4 +50,18 @@ public class Calendar {
         Assert.assertEquals(message, calendarPage.errorMessage.getText());
     }
 
+    @When("user enters {string}")
+    public void user_enters(String entry) {
+        BrowserUtils.highlight(calendarPage.daysInput);
+        calendarPage.daysInput.sendKeys(Keys.BACK_SPACE+entry);
+        calendarPage.inputTitle.click();
+    }
+
+    @When("user cancel and start over")
+    public void userCancelAndStartOver() {
+        BrowserUtils.highlight(calendarPage.cancelButton);
+        calendarPage.cancelButton.click();
+        BrowserUtils.highlight(calendarPage.createEvent);
+        calendarPage.createEvent.click();
+    }
 }

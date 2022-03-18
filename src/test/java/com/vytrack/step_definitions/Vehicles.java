@@ -9,19 +9,16 @@ import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-
 import java.util.ArrayList;
 import java.util.List;
 
 public class Vehicles {
 
-    VehiclesPage vehiclesPage;
-    Actions actions;
+    VehiclesPage vehiclesPage = new VehiclesPage();
+    Actions actions = new Actions(Driver.getDriver());
 
     @When("user hover over three dots ...")
     public void user_hover_over_three_dots() {
-        vehiclesPage = new VehiclesPage();
-        actions = new Actions(Driver.getDriver());
         BrowserUtils.highlight(vehiclesPage.dots);
         actions.moveToElement(vehiclesPage.dots).perform();
     }
@@ -39,7 +36,6 @@ public class Vehicles {
 
     @Then("user should see all the checkboxes are unchecked")
     public void user_should_see_all_the_checkboxes_are_unchecked() {
-        vehiclesPage = new VehiclesPage();
         for (WebElement checkbox : vehiclesPage.carCheckboxes) {
             Assert.assertTrue(checkbox.isDisplayed());
             Assert.assertFalse(checkbox.isSelected());

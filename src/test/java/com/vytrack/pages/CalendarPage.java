@@ -20,4 +20,5 @@ public class CalendarPage {
     @FindBy (xpath = "//body") public WebElement textBody;
     @FindBy (xpath = "//p") public WebElement message;
     @FindBy (xpath = "//h1[@class='oro-subtitle']") public WebElement pageLabel;
+    @FindBy (xpath = "//a[@title='Cancel']") public WebElement cancelButton;
 }
