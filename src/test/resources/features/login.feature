@@ -30,7 +30,7 @@ Feature: Vytrack login (CY19-00)
     Then user should see warning message
     Examples:
       | username    | password    |
-      | " s "       | user31      |
+      | user31       | user31      |
       | UserUser123 | UserUser123 |
       | qwerty      | UserUser123 |
       | UserUser123 | user31      |
