@@ -25,16 +25,16 @@ Feature: Vytrack login (CY19-00)
 
   Scenario Outline: User should not able to login with wrong credentials
     Given user on the login page
-    When user enters '<username>' and user enters '<password>'
+    When user enters "<username>" and user enters "<password>"
     And user clicks the Login button
     Then user should see warning message
     Examples:
       | username    | password    |
-      | user31      | user31      |
+      | " s "       | user31      |
       | UserUser123 | UserUser123 |
       | qwerty      | UserUser123 |
       | UserUser123 | user31      |
       | !33342      | admin       |
       | admin       | admin       |
-      | user31      | *********   |
-      | ****        | ***         |
+      | user31      | gfgf        |
+      | gfg         | gf          |

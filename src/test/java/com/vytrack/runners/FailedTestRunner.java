@@ -6,13 +6,10 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        plugin = {"html:target/cucumber-report/report.html",
-                  "rerun:target/rerun.txt"},
-        features = "src/test/resources/features",
+        plugin = "rerun:target/rerun.txt",
         glue = "com/vytrack/step_definitions",
-        dryRun = false,
-        tags = "@Smoke"
+        features = "@target/rerun.txt"
 )
 
-public class CukesRunner {
+public class FailedTestRunner {
 }
