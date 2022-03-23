@@ -22,8 +22,8 @@
                 <configuration>
                     <parallel>methods</parallel>
                     <useUnlimitedThreads>true</useUnlimitedThreads>
-                    <!-- <threadCount>8</threadCount>-->
-                    <testFailureIgnore>true</testFailureIgnore>
+                     <threadCount>8</threadCount>
+                    <!--<testFailureIgnore>true</testFailureIgnore>-->
                     <includes>
                         <include>**/CukesRunner*.java</include>
                     </includes>
