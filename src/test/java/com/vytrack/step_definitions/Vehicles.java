@@ -19,6 +19,7 @@ public class Vehicles {
 
     @When("user hover over three dots ...")
     public void user_hover_over_three_dots() {
+        BrowserUtils.scrollPage(0, 500);
         BrowserUtils.highlight(vehiclesPage.dots);
         actions.moveToElement(vehiclesPage.dots).perform();
     }
