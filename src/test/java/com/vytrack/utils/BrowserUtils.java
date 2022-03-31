@@ -67,4 +67,13 @@ public class BrowserUtils {
         jsExecutor.executeScript("arguments[0].style.color=''", element);
     }
 
+    /**
+     * Scrolls down to an element using JavaScript
+     *
+     * @param element
+     */
+    public static void scrollToElement(WebElement element) {
+        ((JavascriptExecutor) Driver.getDriver()).executeScript("arguments[0].scrollIntoView(true);", element);
+    }
+
 }
