@@ -15,13 +15,6 @@ node {
            cucumber failedFeaturesNumber: -1, failedScenariosNumber: -1, failedStepsNumber: -1, fileIncludePattern: '**/*.json', pendingStepsNumber: -1, skippedStepsNumber: -1, sortingMethod: 'ALPHABETICAL', undefinedStepsNumber: -1
     }
 
-     stages {
-             stage('Ok') {
-                 steps {
-                     echo "Ok"
-                 }
-             }
-         }
          post {
              always {
                  emailext body: 'A Test EMail', recipientProviders: [[$class: 'DevelopersRecipientProvider'], [$class: 'RequesterRecipientProvider']], subject: 'Vy Track Smoke Test Results'
