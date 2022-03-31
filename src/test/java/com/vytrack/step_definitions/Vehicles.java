@@ -27,11 +27,12 @@ public class Vehicles {
     @Then("user should see three buttons")
     public void user_should_see_three_buttons(List<String> expectedButtons) {
         List<String> actualButtons = new ArrayList<>();
-        for (WebElement each : vehiclesPage.iconsList) {
-            BrowserUtils.highlight(each);
-            Assert.assertTrue(each.isDisplayed());
-            actualButtons.add(each.getAttribute("title"));
-        }
+        BrowserUtils.highlight(vehiclesPage.button1);
+        actualButtons.add(vehiclesPage.button1.getAttribute("title"));
+        BrowserUtils.highlight(vehiclesPage.button2);
+        actualButtons.add(vehiclesPage.button2.getAttribute("title"));
+        BrowserUtils.highlight(vehiclesPage.button3);
+        actualButtons.add(vehiclesPage.button3.getAttribute("title"));
         Assert.assertEquals(expectedButtons, actualButtons);
     }
 

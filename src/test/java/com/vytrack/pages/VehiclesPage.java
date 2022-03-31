@@ -20,4 +20,8 @@ public class VehiclesPage {
     @FindBy (xpath = "//input[@type='checkbox']") public List<WebElement> checkboxes;
     @FindBy (xpath = "//th//input[@type='checkbox']") public WebElement firstCheckbox;
     @FindBy (xpath = "//td//input[@type='checkbox']") public List<WebElement> carCheckboxes;
+
+    @FindBy (xpath = "(//li[@class='launcher-item'])[1]/a") public WebElement button1;
+    @FindBy (xpath = "(//li[@class='launcher-item'])[2]/a") public WebElement button2;
+    @FindBy (xpath = "(//li[@class='launcher-item'])[3]/a") public WebElement button3;
 }
