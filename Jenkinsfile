@@ -15,6 +15,17 @@ node {
            cucumber failedFeaturesNumber: -1, failedScenariosNumber: -1, failedStepsNumber: -1, fileIncludePattern: '**/*.json', pendingStepsNumber: -1, skippedStepsNumber: -1, sortingMethod: 'ALPHABETICAL', undefinedStepsNumber: -1
     }
 
+        agent any
+            stages {
+                stage('Send Email') {
+                    steps {
+                    node ('master'){
+                        echo 'Send Email'
+                    }
+                }
+                }
+            }
+
     environment {
             EMAIL_TO = 'manasworks@gmail.com'
         }
